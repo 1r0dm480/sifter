@@ -14,12 +14,12 @@ t_question(){
     t_ans
 }
 t_ans(){
-    if [[ ${TLISt} == 'y' ]]; then
+    if [[ ${TLIST} == 'y' ]]; then
         echo -e "${W}Great! Time to start AapFinder${NC}"
     else
         echo -e "${W}Please enter your target/s when the file opens${NC}"
         sleep 5
-        nano targets.txt
+        sudo nano targets.txt
         t_question
     fi
 }
@@ -50,8 +50,10 @@ read TYPE
 echo -e "${W}Please enter the name of the output file${NC}"
 read OUTPUT
 echo -e "${W}===========================================================================${NC}"
-python3 aapfinder.py --targets targets.txt -d ${DELAY} ${THREAD} -t ${TYPE} -o /opt/sifter/results/AapFinder/${OUTPUT}.txt
+sudo python3 aapfinder.py --targets targets.txt -d ${DELAY} ${THREAD} -t ${TYPE} -o /opt/sifter/results/AapFinder/${OUTPUT}.txt
 echo -e "${YLW}Results have been saved to /opt/sifter/results/AapFinder/${OUTPUT}.txt${NC}"
 echo -e "${W}===========================================================================${NC}"
-cd /opt/sifter
-modules
+
+
+
+##########################______________ VGhlIERlYWQgQnVubnkgQ2x1Yg== ______________##########################
